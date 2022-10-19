@@ -1,0 +1,17 @@
+<div class="dialog-box">
+    <!-- user of the chat -->
+    <h2>Chat : {{user.name}}</h2>
+
+    <!-- content of the conversation already spoken -->
+    <div class="dialog-box-content">
+        <div class="dialog-box-content-message" *ngFor="let msg of (messagesList$ | async)">
+            <message-box [message]="msg"></message-box>
+        </div>
+    </div>
+
+    <!-- validation form for new message -->
+    <form class="dialog-box-form" [formGroup]="messageForm" (ngSubmit)="sendMessage()">
+        <input formControlName="newMessage" class="dialog-box-message">
+        <button type="submit" [disabled]="!messageForm.valid">OK</button>
+    </form>
+</div>

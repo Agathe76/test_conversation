@@ -1,0 +1,22 @@
+
+.dialog-box {
+    display: flex;
+    width: 20rem;
+    background-color: grey;
+    height: 20rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-content {
+        background-color: white;
+        overflow-y: scroll;
+        height: 10rem;
+        width: 18rem;
+    }
+
+    &-form {
+        margin: 1rem;
+    }
+}
+
